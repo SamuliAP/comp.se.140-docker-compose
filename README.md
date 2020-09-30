@@ -2,9 +2,13 @@
 
 ### Running the exercise:
 git clone https://github.com/SamuliAP/comp.se.140-docker-compose.git
+
 cd comp.se.140-docker-compose/
+
 docker-compose up --build -d (added detach to the course instructions)
+
 curl localhost:8001
+
 docker-compose down
 
 ### Explanation
