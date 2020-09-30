@@ -12,7 +12,7 @@ curl localhost:8001
 docker-compose down
 
 ### Explanation
-A private network is automatically created between the services contained in docker-compose.yaml. The default network will use the "bridge" driver. This network driver does not by default have an entrypoint for the host machine or other external machines to access the containers network. We also could have defined this network ourselves, but the default settings already suited the use case.
+A private network is automatically created between the services contained in docker-compose.yaml. The default network will use the "bridge" driver. This network driver does not by default have an entrypoint for the host machine or other external machines to access the network. We also could have defined this network ourselves, but the default settings already suited the use case.
 
 As docker containers have dynamic addresses, in the proxy program we are referring to the server container by host name "server". This is the name we have configured to be the service name in docker-compose.yaml. Docker automatically maps this host to the service we're referring. This mapping can actually be observed by viewing the hosts -file inside a container, and comparing it to the network configuration, which can be viewed by docker inspect <network id>.
 
