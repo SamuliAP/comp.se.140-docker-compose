@@ -22,7 +22,7 @@ Now, we'll expose a port of the proxy container to the host machine. This is don
 
 ### Example Result Line by Line
 **Hello from 172.18.0.1:46540**  
-This is the gateway address from host machine to the proxy service. Here we can see we're actually not connecting directly to proxy from our host machine, but have to use kind of a reverse proxy (probably also doing some authorization) provided by Docker.
+This is the gateway address from host machine to the proxy service. Here we can see we're actually not connecting directly to the proxy service from our host machine, but have to use kind of a reverse proxy (probably also doing some authorization) provided by Docker.
 
 **to localhost:8001**  
 This is the host we connected with curl, we could've also connected to the actual address found in `docker inspect <network id>`, e.g. 172.18.0.3:80.
